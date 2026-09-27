@@ -33,4 +33,19 @@ export function shuffleDeck(deck: any[]) {
   return shuffled;
 }
 
-console.log(createDeck())
+
+export function calculateScore(hand: any[]) {
+  let score = 0
+  let aces = 0
+
+  for (let card of hand) {
+    score += card.points
+    if (card.value === "ace") aces+= 1
+  }
+  while (score > 21 && aces > 0) {
+    score -= 10
+    aces -= 1
+  }
+
+  return score
+}
