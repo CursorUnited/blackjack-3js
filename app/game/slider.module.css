@@ -1,0 +1,52 @@
+.Root {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.Label {
+  color: white;
+  font-weight: bold;
+}
+
+.ValueText {
+  color: #22c55e;
+  font-family: monospace;
+  font-size: 1.1rem;
+}
+
+.Control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 24px;
+}
+
+.Track {
+  background-color: #4b5563;
+  border-radius: 9999px;
+  flex: 1;
+  height: 8px;
+}
+
+.Range {
+  background-color: #22c55e;
+  border-radius: 9999px;
+  height: 100%;
+}
+
+.Thumb {
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid #22c55e;
+  width: 24px;
+  height: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: grab;
+}
+
+.Thumb:active {
+  cursor: grabbing;
+}
